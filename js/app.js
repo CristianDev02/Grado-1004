@@ -1443,3 +1443,7 @@ document.addEventListener(
 
     }
 );
+
+mobileMenu.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+});
