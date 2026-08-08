@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Aplicación educativa interactiva sobre el círculo unitario y las funciones trigonométricas"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2563eb"
+    >
+
+    <title>
+            Círculo Unitario y Funciones Trigonométricas
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                📐
+            </div>
+
+            <div>
+
+                <h1>
+                    NS
+                </h1>
+
+                <p>
+                    Trigonometría
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <p class="menu-title">
+                PRINCIPAL
+            </p>
+
+
+            <button
+                class="nav-btn active"
+                data-section="inicio"
+            >
+                🏠
+                <span>
+                    Inicio
+                </span>
+            </button>
+
+
+            <p class="menu-title">
+                APRENDIZAJE
+            </p>
+
+
+            <button
+                class="nav-btn"
+                data-section="teoria"
+            >
+                📚
+                <span>
+                    Teoría
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-section="circulo"
+            >
+                ⭕
+                <span>
+                    Círculo unitario
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-section="graficas"
+            >
+                📈
+                <span>
+                    Gráficas
+                </span>
+            </button>
+
+
+            <p class="menu-title">
+                EVALUACIÓN
+            </p>
+
+
+            <button
+                class="nav-btn"
+                data-section="teoricos"
+            >
+                🧠
+                <span>
+                    Problemas teóricos
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-section="practica"
+            >
+                ✏️
+                <span>
+                    Problemas de práctica
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-section="quiz"
+            >
+                📝
+                <span>
+                    Quiz
+                </span>
+            </button>
+
+
+            <p class="menu-title">
+                RECURSOS
+            </p>
+
+
+            <button
+                class="nav-btn"
+                data-section="videos"
+            >
+                🎥
+                <span>
+                    Videos
+                </span>
+            </button>
+
+
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         CONTENIDO PRINCIPAL
+    ================================================== -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="mobile-menu"
+                    id="mobileMenu"
+                >
+                    ☰
+                </button>
+
+                <h2 id="pageTitle">
+                    Inicio
+                </h2>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button
+                    class="theme-button"
+                    id="themeButton"
+                    title="Cambiar tema"
+                >
+                    🌙
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENIDO
+        ================================================== -->
+
+        <div class="content">
+
+
+            <!-- =================================================
+                 INICIO
+            ================================================== -->
+
+            <section
+                class="section active"
+                id="inicio"
+            >
+
+                <div class="hero">
+
+                    <div class="hero-content">
+
+                        <span class="badge">
+                            📐 NS
+                        </span>
+
+
+                        <h1>
+                            Círculo Unitario y
+                            <span>
+                         Funciones Trigonométricas 
+                            </span>
+                            <p>Grado: 10:04</p>
+                        </h1>
+
+
+                        <p>
+                            Aprende trigonometría de una manera
+                            visual, interactiva y práctica.
+                            Explora el círculo unitario,
+                            comprende las funciones trigonométricas,
+                            practica ejercicios y demuestra
+                            tus conocimientos.
+                        </p>
+
+
+                        <div class="integrantes">
+
+                            <strong>
+                                INTEGRANTES:
+                            </strong>
+
+                            <p>
+                                Ivana Andrea Corrales
+                            </p>
+
+                            <p>
+                                Yeliana Davila Palencia
+                            </p>
+
+                            <p>
+                                Mateo Cobo Palacios
+                            </p>
+
+                            <p>
+                                Juliana Flores Mira
+                            </p>
+
+                            <p>
+                                Nicol Pelaez Mendoza
+                            </p>
+
+                        </div>
+
+
+                        <div class="hero-buttons">
+
+                            <button
+                                class="btn primary"
+                                onclick="showSection('teoria')"
+                            >
+                                📚 Comenzar aprendizaje
+                            </button>
+
+
+                            <button
+                                class="btn secondary"
+                                onclick="showSection('circulo')"
+                            >
+                                ⭕ Explorar círculo
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-decoration">
+
+                        <div class="circle-decoration">
+                            θ
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ESTADÍSTICAS -->
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            📚
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                8
+                            </strong>
+
+                            <p>
+                                Temas teóricos
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                10
+                            </strong>
+
+                            <p>
+                                Problemas teóricos
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            ✏️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                10
+                            </strong>
+
+                            <p>
+                                Problemas de práctica
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            📝
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                20
+                            </strong>
+
+                            <p>
+                                Preguntas del quiz
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                
+
+
+                <!-- TEMAS -->
+
+                <div class="section-heading">
+
+                    <h2>
+                        ¿Qué aprenderás?
+                    </h2>
+
+                    <p>
+                        Explora los principales conceptos
+                        de la trigonometría.
+                    </p>
+
+                </div>
+
+
+                <div class="topics-grid">
+
+
+                    <div class="topic-card">
+
+                        <span>
+                            ⭕
+                        </span>
+
+                        <h3>
+                            Círculo unitario
+                        </h3>
+
+                        <p>
+                            Comprende la relación entre
+                            ángulos y coordenadas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <span>
+                            📐
+                        </span>
+
+                        <h3>
+                            Ángulos
+                        </h3>
+
+                        <p>
+                            Aprende grados, radianes
+                            y ángulos notables.
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <span>
+                            📈
+                        </span>
+
+                        <h3>
+                            Funciones
+                        </h3>
+
+                        <p>
+                            Explora seno, coseno,
+                            tangente y sus funciones recíprocas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <span>
+                            🧠
+                        </span>
+
+                        <h3>
+                            Práctica
+                        </h3>
+
+                        <p>
+                            Resuelve problemas y
+                            comprueba tus conocimientos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TEORÍA
+            ================================================== -->
+
+            <section
+                class="section"
+                id="teoria"
+            >
+
+                <div class="section-heading">
+
+                    <h2>
+                        📚 Teoría
+                    </h2>
+
+                    <p>
+                        Aprende los conceptos fundamentales
+                        de la trigonometría.
+                    </p>
+
+                </div>
+
+
+                <div id="theoryContent">
+
+                    <div class="card">
+
+                        <h3>
+                            ⭕ Círculo unitario
+                        </h3>
+
+                        <p>
+                            El círculo unitario es una circunferencia
+                            con centro en el origen y radio igual a 1.
+                        </p>
+
+                        <div class="formula-box">
+                            x² + y² = 1
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>
+                            📐 Grados y radianes
+                        </h3>
+
+                        <p>
+                            Una vuelta completa equivale a 360°
+                            o 2π radianes.
+                        </p>
+
+                        <div class="formula-box">
+                            180° = π radianes
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>
+                            📈 Funciones trigonométricas
+                        </h3>
+
+                        <p>
+                            Las principales funciones son seno,
+                            coseno, tangente, cosecante,
+                            secante y cotangente.
+                        </p>
+
+                        <div class="formula-box">
+                            tan(θ) = sen(θ) / cos(θ)
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CÍRCULO UNITARIO
+            ================================================== -->
+
+            <section
+                class="section"
+                id="circulo"
+            >
+
+                <div class="section-heading">
+
+                    <h2>
+                        ⭕ Círculo unitario
+                    </h2>
+
+                    <p>
+                        Explora cómo cambia el seno,
+                        coseno y tangente al mover el ángulo.
+                    </p>
+
+                </div>
+
+
+                <div class="circle-layout">
+
+
+                    <div class="card">
+
+                        <canvas
+                            id="unitCircle"
+                        ></canvas>
+
+
+                        <div class="circle-legend">
+
+                            <div>
+                                <span class="legend-line red"></span>
+                                Radio / punto
+                            </div>
+
+                            <div>
+                                <span class="legend-line green"></span>
+                                Proyección X
+                            </div>
+
+                            <div>
+                                <span class="legend-line orange"></span>
+                                Proyección Y
+                            </div>
+
+                            <div>
+                                <span class="legend-line purple"></span>
+                                Ángulo
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card">
+
+                        <h3>
+                            Control del ángulo
+                        </h3>
+
+
+                        <div class="angle-control">
+
+                            <input
+                                type="range"
+                                id="angleSlider"
+                                min="0"
+                                max="360"
+                                value="45"
+                            >
+
+
+                            <div
+                                class="angle-value"
+                                id="angleValue"
+                            >
+                                45°
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="circleValues"
+                            class="values-box"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 GRÁFICAS
+            ================================================== -->
+
+            <section
+                class="section"
+                id="graficas"
+            >
+
+                <div class="section-heading">
+
+                    <h2>
+                        📈 Gráficas trigonométricas
+                    </h2>
+
+                    <p>
+                        Observa el comportamiento de las
+                        principales funciones trigonométricas.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+
+                    <div class="function-buttons">
+
+                        <button
+                            class="function-btn active"
+                            data-function="sin"
+                        >
+                            sen(x)
+                        </button>
+
+
+                        <button
+                            class="function-btn"
+                            data-function="cos"
+                        >
+                            cos(x)
+                        </button>
+
+
+                        <button
+                            class="function-btn"
+                            data-function="tan"
+                        >
+                            tan(x)
+                        </button>
+
+
+                        <button
+                            class="function-btn"
+                            data-function="csc"
+                        >
+                            csc(x)
+                        </button>
+
+
+                        <button
+                            class="function-btn"
+                            data-function="sec"
+                        >
+                            sec(x)
+                        </button>
+
+
+                        <button
+                            class="function-btn"
+                            data-function="cot"
+                        >
+                            cot(x)
+                        </button>
+
+                    </div>
+
+
+                    <div class="graph-wrapper">
+
+                        <canvas
+                            id="trigGraph"
+                        ></canvas>
+
+                    </div>
+
+
+                    <div
+                        id="functionInfo"
+                        class="function-info"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROBLEMAS TEÓRICOS
+            ================================================== -->
+
+            <section
+                class="section"
+                id="teoricos"
+            >
+
+                <div class="section-heading">
+
+                    <h2>
+                        🧠 Problemas teóricos
+                    </h2>
+
+                    <p>
+                        Pon a prueba tus conocimientos
+                        sobre el círculo unitario y las
+                        funciones trigonométricas.
+                    </p>
+
+                </div>
+
+
+                <div class="theory-container">
+
+
+                    <div class="theory-top">
+
+                        <span id="theoryCounter">
+                            Pregunta 1 de 10
+                        </span>
+
+
+                        <span>
+                            10 preguntas
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-container">
+
+                        <div
+                            id="theoryProgress"
+                            class="progress-bar"
+                        ></div>
+
+                    </div>
+
+
+                    <div
+                        id="theoryQuestion"
+                        class="theory-question"
+                    >
+
+                        <h2>
+                            Cargando pregunta...
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        id="theoryResult"
+                        class="theory-result"
+                    ></div>
+
+
+                    <div class="theory-actions">
+
+                        <button
+                            id="nextTheory"
+                            class="btn primary"
+                            disabled
+                        >
+                            Siguiente →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROBLEMAS DE PRÁCTICA
+            ================================================== -->
+
+            <section
+                class="section"
+                id="practica"
+            >
+
+                <div class="section-heading">
+
+                    <h2>
+                        ✏️ Problemas de práctica
+                    </h2>
+
+                    <p>
+                        Resuelve los ejercicios y
+                        comprueba tus conocimientos.
+                    </p>
+
+                </div>
+
+
+                <div class="practice-container">
+
+
+                    <div class="practice-top">
+
+                        <span id="practiceCounter">
+                            Ejercicio 1 de 10
+                        </span>
+
+                        <span>
+                            10 ejercicios
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-container">
+
+                        <div
+                            id="practiceProgress"
+                            class="progress-bar"
+                        ></div>
+
+                    </div>
+
+
+                    <div
+                        id="practiceQuestion"
+                        class="practice-question"
+                    ></div>
+
+
+                    <div
+                        id="practiceHint"
+                        class="practice-hint"
+                    ></div>
+
+
+                    <div
+                        id="practiceFeedback"
+                        class="practice-feedback"
+                    ></div>
+
+
+                    <div class="practice-actions">
+
+                        <button
+                            id="showHint"
+                            class="btn secondary"
+                        >
+                            💡 Ver pista
+                        </button>
+
+
+                        <button
+                            id="checkPractice"
+                            class="btn primary"
+                        >
+                            ✓ Comprobar
+                        </button>
+
+
+                        <button
+                            id="nextPractice"
+                            class="btn primary"
+                            style="display:none;"
+                        >
+                            Siguiente →
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="practiceResult"
+                        class="practice-result"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUIZ
+            ================================================== -->
+
+            <section
+                class="section"
+                id="quiz"
+            >
+
+                <div class="section-heading">
+
+                    <h2>
+                        📝 Quiz final
+                    </h2>
+
+                    <p>
+                        Responde las 20 preguntas
+                        y descubre cuánto aprendiste.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="quizContainer"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 VIDEOS
+            ================================================== -->
+
+            <!-- =============================================
+     VIDEOS
+============================================== -->
+
+<section
+    class="section"
+    id="videos"
+>
+
+    <div class="section-heading">
+
+        <h2>
+            🎥 Videos educativos
+        </h2>
+
+        <p>
+            Aprende los principales conceptos del círculo
+            unitario y las funciones trigonométricas mediante
+            explicaciones visuales.
+        </p>
+
+    </div>
+
+
+    <!-- INTRODUCCIÓN -->
+
+
+    <!-- =============================================
+         VIDEO 1
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            ⭕ Círculo Unitario
+        </h2>
+
+        <p>
+            Aprende qué es el círculo unitario, cuáles son
+            sus características y cómo se relaciona con
+            las funciones trigonométricas.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KVSO8-IyPFo?si=ZX7-IAfvPw6wOSdZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 2
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            📐 Grados y Radianes
+        </h2>
+
+        <p>
+            Aprende la diferencia entre grados y radianes
+            y cómo realizar conversiones entre ambas
+            unidades de medida angular.
+        </p>
+
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/kE36sr6ehAk?si=uulyR9QQIJdPQ_6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 3
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            ⭐ Ángulos Notables
+        </h2>
+
+        <p>
+            Aprende los valores de seno, coseno y tangente
+            para los principales ángulos notables del
+            círculo unitario.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7Tlw2rylWIw?si=5V3aItkK3pwyqA20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 4
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            📈 Función Seno
+        </h2>
+
+        <p>
+            Comprende qué representa el seno en el círculo
+            unitario y cómo se construye la gráfica de
+            la función seno.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8zVW0U2jn8U?si=Tcr7gwEgoD418Ypg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 5
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            📉 Función Coseno
+        </h2>
+
+        <p>
+            Aprende cómo funciona el coseno, su relación
+            con el círculo unitario y las características
+            de su gráfica.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8zVW0U2jn8U?si=Tcr7gwEgoD418Ypg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 6
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            📊 Función Tangente
+        </h2>
+
+        <p>
+            Aprende qué es la tangente, cómo calcularla
+            utilizando seno y coseno y por qué presenta
+            asíntotas en determinados ángulos.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8zVW0U2jn8U?si=Tcr7gwEgoD418Ypg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 7
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            🔄 Secante y Cosecante
+        </h2>
+
+        <p>
+            Comprende las funciones secante y cosecante,
+            sus relaciones con el coseno y el seno y
+            sus principales características.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1oGr01mDHd0?si=a8sIjxOn0zXxgsSV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 8
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            🔁 Cotangente
+        </h2>
+
+        <p>
+            Aprende qué es la cotangente, cómo se relaciona
+            con la tangente y cómo identificar los valores
+            donde no está definida.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cV0H4eEIIL8?si=cmLLUFYR1GXPc5Xi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+    
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 9
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            📈 Gráficas de Funciones Trigonométricas
+        </h2>
+
+        <p>
+            Observa y compara las gráficas de seno,
+            coseno, tangente y las funciones trigonométricas
+            recíprocas.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ehz4iZGWiPg?si=WkXxtzh0p2QWODgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO 10
+    ============================================== -->
+
+    <div class="card video-card">
+
+        <h2>
+            🧠 Repaso General de Trigonometría
+        </h2>
+
+        <p>
+            Repasa los principales conceptos estudiados:
+            círculo unitario, ángulos, seno, coseno,
+            tangente y funciones recíprocas.
+        </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/p-icY9x7HK4?si=HDu1FUjUTD0QIPht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+</section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                © Grado 1004 2026
+            </p>
+
+            <p>
+                Círculo Unitario y Funciones Trigonométricas
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="js/app.js"></script>
+
+<script src="js/circulo.js"></script>
+
+<script src="js/graficas.js"></script>
+
+<script src="js/ejercicios.js"></script>
+
+<script src="js/problemas.js"></script>
+
+<script src="js/quiz.js"></script>
+
+</body>
+
+</html>
