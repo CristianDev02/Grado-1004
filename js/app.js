@@ -1241,3 +1241,205 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* =====================================================
+   MENÚ MÓVIL
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const mobileMenu =
+            document.getElementById(
+                "mobileMenu"
+            );
+
+        const sidebar =
+            document.getElementById(
+                "sidebar"
+            );
+
+
+        if (
+            !mobileMenu ||
+            !sidebar
+        ) {
+
+            return;
+
+        }
+
+
+        /* -------------------------------------------------
+           CREAR OVERLAY
+        ------------------------------------------------- */
+
+        let overlay =
+            document.querySelector(
+                ".mobile-overlay"
+            );
+
+
+        if (!overlay) {
+
+            overlay =
+                document.createElement(
+                    "div"
+                );
+
+            overlay.className =
+                "mobile-overlay";
+
+            document.body.appendChild(
+                overlay
+            );
+
+        }
+
+
+        /* -------------------------------------------------
+           ABRIR / CERRAR MENÚ
+        ------------------------------------------------- */
+
+        mobileMenu.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                const abierto =
+                    sidebar.classList.toggle(
+                        "show"
+                    );
+
+
+                overlay.classList.toggle(
+                    "show",
+                    abierto
+                );
+
+
+                /* Cambiar icono */
+
+                if (abierto) {
+
+                    mobileMenu.textContent =
+                        "✕";
+
+                    mobileMenu.setAttribute(
+                        "title",
+                        "Cerrar menú"
+                    );
+
+                } else {
+
+                    mobileMenu.textContent =
+                        "☰";
+
+                    mobileMenu.setAttribute(
+                        "title",
+                        "Abrir menú"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* -------------------------------------------------
+           CERRAR AL TOCAR EL OVERLAY
+        ------------------------------------------------- */
+
+        overlay.addEventListener(
+            "click",
+            function () {
+
+                closeMobileMenu();
+
+            }
+        );
+
+
+        /* -------------------------------------------------
+           CERRAR AL SELECCIONAR UNA OPCIÓN
+        ------------------------------------------------- */
+
+        const navButtons =
+            document.querySelectorAll(
+                ".nav-btn"
+            );
+
+
+        navButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        if (
+                            window.innerWidth <= 1024
+                        ) {
+
+                            closeMobileMenu();
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* -------------------------------------------------
+           FUNCIÓN CERRAR MENÚ
+        ------------------------------------------------- */
+
+        function closeMobileMenu() {
+
+            sidebar.classList.remove(
+                "show"
+            );
+
+            overlay.classList.remove(
+                "show"
+            );
+
+
+            mobileMenu.textContent =
+                "☰";
+
+
+            mobileMenu.setAttribute(
+                "title",
+                "Abrir menú"
+            );
+
+        }
+
+
+        /* -------------------------------------------------
+           CERRAR SI SE CAMBIA A PANTALLA GRANDE
+        ------------------------------------------------- */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (
+                    window.innerWidth > 1024
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+    }
+);
